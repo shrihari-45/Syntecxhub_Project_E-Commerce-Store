@@ -1,0 +1,25 @@
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+*.local
+
+# Python / Backend
+backend/__pycache__/
+backend/*/__pycache__/
+backend/*/*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+backend/.env
+env/
+venv/
+.venv/
+ENV/
+
+# System / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
