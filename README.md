@@ -1,13 +1,13 @@
-# SyntecxHub Full-Stack E-Commerce Platform
+# ShopHub Full-Stack E-Commerce Platform
 
-> **Syntecxhub Internship — Project 1: Full-Stack Web Application**  
+> **Full-Stack Web Application**  
 > Built with **React.js (Vite)**, **Python (Flask REST API)**, **MongoDB**, and **JWT Authentication**.
 
 ---
 
 ## 🌟 Overview
 
-The **SyntecxHub Store** is a modern, production-grade e-commerce web platform inspired by industry leaders such as Amazon, Myntra, and Shopify. It features a responsive UI with deep royal blue and electric indigo accents, clean white surfaces, micro-animations, robust server-side stock validation, real-time MongoDB persistence, and an administrative management dashboard.
+The **ShopHub Store** is a modern, production-grade e-commerce web platform inspired by industry leaders such as Amazon, Myntra, and Shopify. It features a responsive UI with deep royal blue and electric indigo accents, clean white surfaces, micro-animations, robust server-side stock validation, real-time MongoDB persistence, and an administrative management dashboard.
 
 ---
 
@@ -45,7 +45,7 @@ The **SyntecxHub Store** is a modern, production-grade e-commerce web platform i
 - **Shopping Cart**:
   - Slide-in quick cart drawer + full detailed cart page.
   - Real-time subtotal calculation and free shipping threshold tracker.
-  - Promo code engine (`SYNTEC10` for 10% off, `WELCOME20` for 20% off).
+  - Promo code engine (`SAVE10` for 10% off, `WELCOME20` for 20% off).
   - Persistent cart storage in `localStorage`.
 - **Checkout & Order Placement**:
   - Multi-step checkout with recipient shipping address validation.
@@ -220,7 +220,7 @@ To simplify grading and reviewer evaluation, the login dialog includes **1-Click
 
 | Account Type | Email Address | Password | Permissions |
 | :--- | :--- | :--- | :--- |
-| **Administrator** | `admin@syntecxhub.com` | `Admin@123` | Full Admin Dashboard, Product CRUD, Order Status Controls |
+| **Administrator** | `admin@shophub.com` | `Admin@123` | Full Admin Dashboard, Product CRUD, Order Status Controls |
 | **Customer** | `alex@example.com` | `Customer@123` | Browsing, Cart, Checkout, Personal Order History |
 | **Customer 2** | `sarah@example.com` | `Customer@123` | Browsing, Cart, Checkout, Personal Order History |
 
@@ -229,7 +229,7 @@ To simplify grading and reviewer evaluation, the login dialog includes **1-Click
 ## 🎟️ Demo Promo Codes
 
 During checkout or in the cart page, test coupons can be applied:
-- `SYNTEC10` $\rightarrow$ **10% Discount** on subtotal
+- `SAVE10` $\rightarrow$ **10% Discount** on subtotal
 - `WELCOME20` $\rightarrow$ **20% Discount** on subtotal
 
 ---
@@ -272,7 +272,7 @@ python backend/test_api_flow.py
 
 Expected output:
 ```
-[*] Starting Syntecxhub API Integration Verification...
+[*] Starting ShopHub API Integration Verification...
 [TEST 1/7 PASS] Backend health verified: 200 OK.
 [TEST 2/7 PASS] Catalog products retrieved: Apple MacBook Pro 14 M3 Chip... ($1599.0)
 [TEST 3/7 PASS] Customer login verified (Token issued, User: Alex Johnson).
@@ -288,5 +288,4 @@ Expected output:
 
 ## 📄 License & Attribution
 
-Developed for the **Syntecxhub Internship Assignment**.  
-Designed and engineered as a complete full-stack demonstration portfolio project.
+Designed and engineered as a complete full-stack portfolio e-commerce platform.

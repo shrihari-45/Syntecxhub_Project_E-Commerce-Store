@@ -18,11 +18,11 @@ export default function Footer({ setCurrentRoute }) {
               <div className="brand-icon">
                 <ShoppingBag size={22} />
               </div>
-              <span>Syntecx<span style={{ color: '#818cf8' }}>Hub</span></span>
+              <span>Shop<span style={{ color: '#818cf8' }}>Hub</span></span>
               <span className="brand-badge">Store</span>
             </div>
             <p className="footer-text">
-              Engineered with modern full-stack web standards: React.js, Python Flask REST API, and MongoDB persistent storage. Developed for the Syntecxhub Internship assignment.
+              Engineered with modern full-stack web standards: React.js, Python Flask REST API, and MongoDB persistent storage. Deliver modern e-commerce with seamless checkout.
             </p>
             <div className="footer-social-row">
               <a href="https://github.com" target="_blank" rel="noreferrer" className="social-icon-btn" aria-label="GitHub">
@@ -57,7 +57,7 @@ export default function Footer({ setCurrentRoute }) {
                 <button className="footer-link" onClick={() => navigateTo('orders')}>Track Orders</button>
               </li>
               <li>
-                <button className="footer-link" onClick={() => navigateTo('about')}>About Syntecxhub</button>
+                <button className="footer-link" onClick={() => navigateTo('about')}>About Us</button>
               </li>
               <li>
                 <button className="footer-link" onClick={() => navigateTo('contact')}>Help & Contact</button>
@@ -79,19 +79,19 @@ export default function Footer({ setCurrentRoute }) {
 
           {/* Contact Details */}
           <div>
-            <h4 className="footer-title">Internship Project</h4>
+            <h4 className="footer-title">Customer Support</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.9rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                 <ShieldCheck size={18} style={{ color: '#818cf8', flexShrink: 0 }} />
-                <span>Syntecxhub Web Development Track</span>
+                <span>Verified Online Store</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                 <Mail size={18} style={{ color: '#818cf8', flexShrink: 0 }} />
-                <span>internships@syntecxhub.com</span>
+                <span>support@shophub.com</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                 <Phone size={18} style={{ color: '#818cf8', flexShrink: 0 }} />
-                <span>+1 (800) 555-SYNTECX</span>
+                <span>+1 (800) 555-0199</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
                 <MapPin size={18} style={{ color: '#818cf8', flexShrink: 0 }} />
@@ -104,7 +104,7 @@ export default function Footer({ setCurrentRoute }) {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <div>
-            © {new Date().getFullYear()} Syntecxhub E-Commerce. Built with React.js & Python Flask.
+            © {new Date().getFullYear()} ShopHub Store. Built with React.js & Python Flask.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', color: '#64748b' }}>
             <span>Secure 256-Bit SSL</span>

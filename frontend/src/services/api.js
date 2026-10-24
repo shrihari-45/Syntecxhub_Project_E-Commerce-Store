@@ -1,7 +1,7 @@
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 async function request(endpoint, options = {}) {
-  const token = localStorage.getItem('syntec_token');
+  const token = localStorage.getItem('shophub_token') || localStorage.getItem('syntec_token');
   
   const headers = {
     'Content-Type': 'application/json',

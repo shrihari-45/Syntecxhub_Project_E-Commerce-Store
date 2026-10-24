@@ -11,5 +11,5 @@ app = create_app(Config)
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
-    print(f"[SERVER] Syntecxhub E-Commerce Server starting at http://127.0.0.1:{port}")
+    print(f"[SERVER] ShopHub E-Commerce Server starting at http://127.0.0.1:{port}")
     app.run(host="0.0.0.0", port=port, debug=Config.DEBUG)

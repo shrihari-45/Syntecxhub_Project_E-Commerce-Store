@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SYNTECXHUB E-COMMERCE DESIGN SYSTEM & GLOBAL STYLES
+   SHOPHUB E-COMMERCE DESIGN SYSTEM & GLOBAL STYLES
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
@@ -62,7 +62,9 @@
 }
 
 /* Base Resets */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -109,7 +111,9 @@ img {
   display: block;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 0.95rem;
 }
@@ -197,7 +201,8 @@ input, select, textarea {
   padding: 0.25rem 0;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--primary);
 }
 
@@ -654,7 +659,8 @@ input, select, textarea {
   gap: 0.75rem;
 }
 
-.category-card:hover, .category-card.active {
+.category-card:hover,
+.category-card.active {
   border-color: var(--primary);
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
@@ -823,7 +829,6 @@ input, select, textarea {
 .original-price {
   font-size: 0.9rem;
   color: var(--text-light);
-  text-decoration: line-line-through;
   text-decoration: line-through;
 }
 
@@ -946,7 +951,8 @@ input, select, textarea {
   transition: var(--transition);
 }
 
-.filter-item-btn:hover, .filter-item-btn.active {
+.filter-item-btn:hover,
+.filter-item-btn.active {
   background: var(--primary-light);
   color: var(--primary);
   font-weight: 600;
@@ -1419,7 +1425,8 @@ input, select, textarea {
   transition: var(--transition);
 }
 
-.payment-method-box:hover, .payment-method-box.selected {
+.payment-method-box:hover,
+.payment-method-box.selected {
   border-color: var(--primary);
   background: var(--primary-light);
 }
@@ -1468,11 +1475,30 @@ input, select, textarea {
   letter-spacing: 0.04em;
 }
 
-.status-pending { background: #fef3c7; color: #b45309; }
-.status-processing { background: #e0e7ff; color: #4338ca; }
-.status-shipped { background: #dbeafe; color: #1d4ed8; }
-.status-delivered { background: #d1fae5; color: #047857; }
-.status-cancelled { background: #fee2e2; color: #b91c1c; }
+.status-pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-processing {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.status-shipped {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-delivered {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.status-cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
 
 /* --------------------------------------------------------------------------
    ADMIN DASHBOARD
@@ -1548,7 +1574,8 @@ input, select, textarea {
   transition: var(--transition);
 }
 
-.admin-tab-btn:hover, .admin-tab-btn.active {
+.admin-tab-btn:hover,
+.admin-tab-btn.active {
   color: var(--primary);
   border-bottom-color: var(--primary);
 }
@@ -1703,16 +1730,41 @@ input, select, textarea {
   animation: slideInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.toast-success { border-left: 4px solid var(--success); }
-.toast-error { border-left: 4px solid var(--danger); }
-.toast-warning { border-left: 4px solid var(--warning); }
-.toast-info { border-left: 4px solid var(--info); }
+.toast-success {
+  border-left: 4px solid var(--success);
+}
 
-.toast-icon { flex-shrink: 0; }
-.toast-success .toast-icon { color: var(--success); }
-.toast-error .toast-icon { color: var(--danger); }
-.toast-warning .toast-icon { color: var(--warning); }
-.toast-info .toast-icon { color: var(--info); }
+.toast-error {
+  border-left: 4px solid var(--danger);
+}
+
+.toast-warning {
+  border-left: 4px solid var(--warning);
+}
+
+.toast-info {
+  border-left: 4px solid var(--info);
+}
+
+.toast-icon {
+  flex-shrink: 0;
+}
+
+.toast-success .toast-icon {
+  color: var(--success);
+}
+
+.toast-error .toast-icon {
+  color: var(--danger);
+}
+
+.toast-warning .toast-icon {
+  color: var(--warning);
+}
+
+.toast-info .toast-icon {
+  color: var(--info);
+}
 
 .toast-message {
   flex: 1;
@@ -1854,27 +1906,53 @@ input, select, textarea {
 
 /* Keyframe Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleUp {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes slideInRight {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInUp {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1885,61 +1963,80 @@ input, select, textarea {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .hero-subtitle {
     margin-left: auto;
     margin-right: auto;
   }
+
   .hero-cta-group {
     justify-content: center;
   }
+
   .features-bar {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .category-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .admin-stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .checkout-grid {
     grid-template-columns: 1fr;
   }
+
   .detail-grid {
     grid-template-columns: 1fr;
   }
+
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-search {
+
+  .nav-links,
+  .nav-search {
     display: none;
   }
+
   .mobile-menu-toggle {
     display: flex;
   }
+
   .shop-layout {
     grid-template-columns: 1fr;
   }
+
   .filter-sidebar {
     position: static;
   }
+
   .hero-title {
     font-size: 2.35rem;
   }
+
   .category-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .features-bar {
     grid-template-columns: 1fr;
   }
+
   .admin-stats-grid {
     grid-template-columns: 1fr;
   }
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
   .form-grid-2 {
     grid-template-columns: 1fr;
   }

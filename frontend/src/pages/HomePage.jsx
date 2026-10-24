@@ -56,7 +56,7 @@ export default function HomePage({ setCurrentRoute, setSelectedCategory, onViewP
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     if (!newsletterEmail) return;
-    showToast(`Thank you for subscribing! Promo code SYNTEC10 sent to ${newsletterEmail}`, 'success');
+    showToast(`Thank you for subscribing! Promo code SAVE10 sent to ${newsletterEmail}`, 'success');
     setNewsletterEmail('');
   };
 
@@ -176,10 +176,10 @@ export default function HomePage({ setCurrentRoute, setSelectedCategory, onViewP
               marginBottom: '1rem'
             }}>
               <Tag size={16} />
-              <span>LIMITED INTERNSHIP SPECIAL</span>
+              <span>LIMITED TIME SPECIAL OFFER</span>
             </div>
             <h3 style={{ fontSize: '2.3rem', fontFamily: 'var(--font-display)', fontWeight: 800, lineHeight: 1.2, marginBottom: '0.75rem' }}>
-              Save 10% on your initial checkout with code <span style={{ textDecoration: 'underline', color: '#fef08a' }}>SYNTEC10</span>
+              Save 10% on your initial checkout with code <span style={{ textDecoration: 'underline', color: '#fef08a' }}>SAVE10</span>
             </h3>
             <p style={{ color: '#e0e7ff', fontSize: '1.05rem', lineHeight: 1.6 }}>
               Enjoy automated server-calculated totals, instant demo payment processing, and real-time MongoDB order tracking.
@@ -237,7 +237,7 @@ export default function HomePage({ setCurrentRoute, setSelectedCategory, onViewP
             Stay in the Loop
           </h3>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.75rem' }}>
-            Subscribe to our newsletter to receive the latest product releases, flash discounts, and internship portfolio updates directly.
+            Subscribe to our newsletter to receive the latest product releases, flash discounts, and exclusive offers directly.
           </p>
           <form onSubmit={handleNewsletterSubmit} style={{ display: 'flex', gap: '0.75rem', maxWidth: 480, margin: '0 auto' }}>
             <input

@@ -49,7 +49,7 @@ export default function CheckoutPage({ promoCode, onOrderSuccess, onNavigateToSh
   const shippingFee = shippingMethod === 'express' ? 14.99 : (isFreeStandard ? 0.0 : 9.99);
 
   let discountAmount = 0.0;
-  if (promoCode === 'SYNTEC10') discountAmount = Number((subtotal * 0.10).toFixed(2));
+  if (promoCode === 'SAVE10' || promoCode === 'SYNTEC10') discountAmount = Number((subtotal * 0.10).toFixed(2));
   if (promoCode === 'WELCOME20') discountAmount = Number((subtotal * 0.20).toFixed(2));
 
   const subtotalAfterDiscount = Math.max(0, subtotal - discountAmount);

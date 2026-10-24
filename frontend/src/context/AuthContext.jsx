@@ -6,7 +6,7 @@ const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(() => localStorage.getItem('syntec_token'));
+  const [token, setToken] = useState(() => localStorage.getItem('shophub_token') || localStorage.getItem('syntec_token'));
   const [loading, setLoading] = useState(true);
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authModalMode, setAuthModalMode] = useState('login'); // 'login' | 'register'
@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
   // Hydrate user from backend token on mount
   useEffect(() => {
     async function loadUser() {
-      const storedToken = localStorage.getItem('syntec_token');
+      const storedToken = localStorage.getItem('shophub_token') || localStorage.getItem('syntec_token');
       if (!storedToken) {
         setUser(null);
         setLoading(false);
@@ -37,12 +37,14 @@ export function AuthProvider({ children }) {
           setUser(response.data.user);
         } else {
           // Token invalid or user not found
+          localStorage.removeItem('shophub_token');
           localStorage.removeItem('syntec_token');
           setToken(null);
           setUser(null);
         }
       } catch (err) {
         console.warn('Failed to hydrate user session:', err);
+        localStorage.removeItem('shophub_token');
         localStorage.removeItem('syntec_token');
         setToken(null);
         setUser(null);
@@ -59,7 +61,7 @@ export function AuthProvider({ children }) {
       const res = await api.post('/auth/login', { email, password });
       if (res.success && res.data) {
         const { user: userData, token: jwtToken } = res.data;
-        localStorage.setItem('syntec_token', jwtToken);
+        localStorage.setItem('shophub_token', jwtToken);
         setToken(jwtToken);
         setUser(userData);
         showToast(`Welcome back, ${userData.name}!`, 'success');
@@ -78,10 +80,10 @@ export function AuthProvider({ children }) {
       const res = await api.post('/auth/register', { name, email, password });
       if (res.success && res.data) {
         const { user: userData, token: jwtToken } = res.data;
-        localStorage.setItem('syntec_token', jwtToken);
+        localStorage.setItem('shophub_token', jwtToken);
         setToken(jwtToken);
         setUser(userData);
-        showToast(`Welcome to Syntecxhub Store, ${userData.name}!`, 'success');
+        showToast(`Welcome to ShopHub, ${userData.name}!`, 'success');
         closeAuthModal();
         return { success: true };
       }
@@ -93,6 +95,7 @@ export function AuthProvider({ children }) {
   };
 
   const logout = () => {
+    localStorage.removeItem('shophub_token');
     localStorage.removeItem('syntec_token');
     setToken(null);
     setUser(null);

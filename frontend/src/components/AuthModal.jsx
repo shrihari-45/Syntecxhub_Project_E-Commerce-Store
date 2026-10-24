@@ -49,9 +49,9 @@ export default function AuthModal() {
 
   const handleQuickFill = (role) => {
     if (role === 'admin') {
-      setEmail('admin@syntecxhub.com');
+      setEmail('admin@shophub.com');
       setPassword('Admin@123');
-      if (!isLogin) setName('Syntecxhub Admin');
+      if (!isLogin) setName('Store Admin');
     } else {
       setEmail('alex@example.com');
       setPassword('Customer@123');
@@ -69,7 +69,7 @@ export default function AuthModal() {
               {isLogin ? 'Welcome Back' : 'Create an Account'}
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: 4 }}>
-              {isLogin ? 'Sign in to access your orders and profile' : 'Join Syntecxhub Store for seamless shopping'}
+              {isLogin ? 'Sign in to access your orders and profile' : 'Join ShopHub Store for seamless shopping'}
             </p>
           </div>
           <button className="modal-close-btn" onClick={closeAuthModal} aria-label="Close modal">
@@ -88,7 +88,7 @@ export default function AuthModal() {
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontWeight: 600, color: 'var(--text-main)', marginBottom: '0.45rem' }}>
             <ShieldCheck size={16} style={{ color: 'var(--primary)' }} />
-            <span>Internship Evaluator Fast-Fill:</span>
+            <span>Quick Demo Fast-Fill:</span>
           </div>
           <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
             <button
@@ -105,7 +105,7 @@ export default function AuthModal() {
               onClick={() => handleQuickFill('admin')}
               id="quick-fill-admin-btn"
             >
-              Fill Admin (admin@syntecxhub.com)
+              Fill Admin (admin@shophub.com)
             </button>
             <button
               type="button"

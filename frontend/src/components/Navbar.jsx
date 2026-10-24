@@ -64,7 +64,7 @@ export default function Navbar({ currentRoute, setCurrentRoute, onSearch }) {
           <div className="brand-icon">
             <ShoppingBag size={22} />
           </div>
-          <span>Syntecx<span style={{ color: 'var(--primary)' }}>Hub</span></span>
+          <span>Shop<span style={{ color: 'var(--primary)' }}>Hub</span></span>
           <span className="brand-badge">Store</span>
         </div>
 
@@ -258,7 +258,7 @@ export default function Navbar({ currentRoute, setCurrentRoute, onSearch }) {
             style={{ textAlign: 'left', padding: '0.5rem 0' }}
             onClick={() => navigateTo('about')}
           >
-            About Syntecxhub
+            About Us
           </button>
           <button 
             className="nav-link" 

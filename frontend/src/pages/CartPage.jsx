@@ -21,25 +21,25 @@ export default function CartPage({ onNavigateToShop, onNavigateToCheckout, promo
   const [inputCoupon, setInputCoupon] = useState(promoCode || '');
   const [appliedCoupon, setAppliedCoupon] = useState(promoCode || '');
   const [discountPercent, setDiscountPercent] = useState(
-    promoCode === 'SYNTEC10' ? 0.10 : promoCode === 'WELCOME20' ? 0.20 : 0
+    (promoCode === 'SAVE10' || promoCode === 'SYNTEC10') ? 0.10 : promoCode === 'WELCOME20' ? 0.20 : 0
   );
 
   const handleApplyCoupon = (e) => {
     e.preventDefault();
     const code = inputCoupon.trim().toUpperCase();
 
-    if (code === 'SYNTEC10') {
-      setAppliedCoupon('SYNTEC10');
+    if (code === 'SAVE10' || code === 'SYNTEC10') {
+      setAppliedCoupon(code);
       setDiscountPercent(0.10);
-      if (setPromoCode) setPromoCode('SYNTEC10');
-      showToast('Promo code SYNTEC10 applied: 10% discount!', 'success');
+      if (setPromoCode) setPromoCode(code);
+      showToast(`Promo code ${code} applied: 10% discount!`, 'success');
     } else if (code === 'WELCOME20') {
       setAppliedCoupon('WELCOME20');
       setDiscountPercent(0.20);
       if (setPromoCode) setPromoCode('WELCOME20');
       showToast('Promo code WELCOME20 applied: 20% discount!', 'success');
     } else {
-      showToast('Invalid promo code. Try "SYNTEC10" or "WELCOME20"', 'error');
+      showToast('Invalid promo code. Try "SAVE10" or "WELCOME20"', 'error');
     }
   };
 
@@ -205,7 +205,7 @@ export default function CartPage({ onNavigateToShop, onNavigateToCheckout, promo
               <div style={{ display: 'flex', gap: '0.5rem' }}>
                 <input
                   type="text"
-                  placeholder="e.g. SYNTEC10"
+                  placeholder="e.g. SAVE10"
                   className="form-input"
                   style={{ textTransform: 'uppercase' }}
                   value={inputCoupon}
@@ -232,7 +232,7 @@ export default function CartPage({ onNavigateToShop, onNavigateToCheckout, promo
                 )}
               </div>
               <div style={{ fontSize: '0.78rem', color: 'var(--text-light)', marginTop: 4 }}>
-                Available demo coupons: <strong>SYNTEC10</strong> (10% off) or <strong>WELCOME20</strong> (20% off)
+                Available demo coupons: <strong>SAVE10</strong> (10% off) or <strong>WELCOME20</strong> (20% off)
               </div>
             </form>
 

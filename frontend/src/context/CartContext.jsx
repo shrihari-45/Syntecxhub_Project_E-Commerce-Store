@@ -6,7 +6,7 @@ const CartContext = createContext(null);
 export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('syntec_cart');
+      const saved = localStorage.getItem('shophub_cart') || localStorage.getItem('syntec_cart');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -19,7 +19,7 @@ export function CartProvider({ children }) {
   // Save to localStorage on change
   useEffect(() => {
     try {
-      localStorage.setItem('syntec_cart', JSON.stringify(cartItems));
+      localStorage.setItem('shophub_cart', JSON.stringify(cartItems));
     } catch (e) {
       console.warn('Failed to save cart to localStorage', e);
     }
@@ -104,6 +104,7 @@ export function CartProvider({ children }) {
 
   const clearCart = useCallback(() => {
     setCartItems([]);
+    localStorage.removeItem('shophub_cart');
     localStorage.removeItem('syntec_cart');
   }, []);
 

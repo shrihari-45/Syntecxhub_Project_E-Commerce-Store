@@ -125,7 +125,7 @@ export default function AdminDashboardPage() {
             403 Forbidden • Access Denied
           </h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.75rem' }}>
-            Your account ({user.email}) does not possess the administrator role privileges. Log in as <strong>admin@syntecxhub.com</strong> to administer products and orders.
+            Your account ({user.email}) does not possess the administrator role privileges. Log in as an Administrator (e.g. <strong>admin@shophub.com</strong>) to administer products and orders.
           </p>
         </div>
       </div>
@@ -196,7 +196,7 @@ export default function AdminDashboardPage() {
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-purple)', fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.25rem' }}>
             <ShieldCheck size={18} />
-            <span>SYNTECXHUB BACKOFFICE CONSOLE</span>
+            <span>SHOPHUB BACKOFFICE CONSOLE</span>
           </div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: 800 }}>
             Admin Dashboard

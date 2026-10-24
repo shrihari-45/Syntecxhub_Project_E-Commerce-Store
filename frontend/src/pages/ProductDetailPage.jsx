@@ -323,7 +323,7 @@ export default function ProductDetailPage({
                   </div>
                 </div>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>
-                  Flawless design and intuitive to use straight out of the box. Syntecxhub delivery was seamless and the packaging was completely secure.
+                  Flawless design and intuitive to use straight out of the box. Delivery was seamless and the packaging was completely secure.
                 </p>
               </div>
             </div>

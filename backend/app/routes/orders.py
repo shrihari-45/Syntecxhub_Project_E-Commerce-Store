@@ -74,7 +74,7 @@ def create_order(current_user):
 
     # Calculate promo discount
     discount_amount = 0.0
-    if promo_code == "SYNTEC10":
+    if promo_code in ("SAVE10", "SYNTEC10"):
         discount_amount = round(raw_subtotal * 0.10, 2)
     elif promo_code == "WELCOME20":
         discount_amount = round(raw_subtotal * 0.20, 2)

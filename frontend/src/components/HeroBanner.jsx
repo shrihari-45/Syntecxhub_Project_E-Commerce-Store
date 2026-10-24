@@ -13,7 +13,7 @@ export default function HeroBanner({ onShopClick, onCategoryClick }) {
           <div>
             <div className="hero-tag">
               <Sparkles size={16} style={{ color: '#fbbf24' }} />
-              <span>Syntecxhub Exclusive • Up to 30% Off Selected Collections</span>
+              <span>Special Offer • Up to 30% Off Selected Collections</span>
             </div>
 
             <h1 className="hero-title">

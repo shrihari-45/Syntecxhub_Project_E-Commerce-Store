@@ -24,7 +24,17 @@ def seed_database():
 
     admin_user = {
         "_id": ObjectId("660000000000000000000001"),
-        "name": "Syntecxhub Admin",
+        "name": "Store Admin",
+        "email": "admin@shophub.com",
+        "password": admin_pw,
+        "role": "admin",
+        "created_at": datetime.now(timezone.utc) - timedelta(days=60),
+        "updated_at": datetime.now(timezone.utc)
+    }
+
+    admin_user_alt = {
+        "_id": ObjectId("660000000000000000000004"),
+        "name": "Admin User",
         "email": "admin@syntecxhub.com",
         "password": admin_pw,
         "role": "admin",
@@ -52,8 +62,8 @@ def seed_database():
         "updated_at": datetime.now(timezone.utc)
     }
 
-    db.users.insert_many([admin_user, customer_alex, customer_sarah])
-    print(f"[+] Created 1 Admin and 2 Customer user accounts.")
+    db.users.insert_many([admin_user, admin_user_alt, customer_alex, customer_sarah])
+    print(f"[+] Created 2 Admin and 2 Customer user accounts.")
 
     # 2. Seed Products
     products = [

@@ -27,10 +27,10 @@ export default function AboutPage({ onNavigateToShop }) {
           marginBottom: '1rem'
         }}>
           <ShieldCheck size={16} />
-          <span>SYNTECXHUB INTERNSHIP • FULL-STACK PROJECT 1</span>
+          <span>FULL-STACK E-COMMERCE PLATFORM</span>
         </div>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2.8rem', fontWeight: 800, marginBottom: '1rem' }}>
-          About Syntecxhub E-Commerce
+          About ShopHub Store
         </h1>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: 680, margin: '0 auto', lineHeight: 1.6 }}>
           A production-grade, full-stack shopping platform engineered with clean architectural separation, strict security standards, and seamless user experiences.

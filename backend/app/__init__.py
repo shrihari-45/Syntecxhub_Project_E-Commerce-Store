@@ -33,7 +33,7 @@ def create_app(config_class=Config):
         return jsonify({
             "status": "healthy",
             "mock_mode": DatabaseManager.is_mock(),
-            "service": "Syntecxhub E-Commerce Backend API"
+            "service": "ShopHub E-Commerce Backend API"
         }), 200
 
     # Global Error Handlers

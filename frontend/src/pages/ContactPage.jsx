@@ -14,7 +14,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    showToast('Your message has been sent to Syntecxhub support! We will reply within 24 hours.', 'success');
+    showToast('Your message has been sent to ShopHub support! We will reply within 24 hours.', 'success');
     setSubmitted(true);
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 style={{ fontWeight: 700, fontSize: '1.05rem' }}>Email Support</h4>
-                <div style={{ color: 'var(--primary)', fontSize: '0.9rem', fontWeight: 600 }}>support@syntecxhub.com</div>
+                <div style={{ color: 'var(--primary)', fontSize: '0.9rem', fontWeight: 600 }}>support@shophub.com</div>
               </div>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
@@ -55,7 +55,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 style={{ fontWeight: 700, fontSize: '1.05rem' }}>Telephone Helpline</h4>
-                <div style={{ color: 'var(--accent-purple)', fontSize: '0.9rem', fontWeight: 600 }}>+1 (800) 555-SYNTECX</div>
+                <div style={{ color: 'var(--accent-purple)', fontSize: '0.9rem', fontWeight: 600 }}>+1 (800) 555-0199</div>
               </div>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
@@ -74,7 +74,7 @@ export default function ContactPage() {
               </div>
             </div>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>
-              Syntecxhub Technology & Innovation Campus.
+              ShopHub Technology & Innovation Campus.
             </p>
           </div>
         </div>
